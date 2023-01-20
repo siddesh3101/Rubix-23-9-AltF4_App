@@ -37,13 +37,13 @@ class _RetailerDashBoardState extends State<RetailerDashBoard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'WEDNESDAY, 18 JAN',
+                        'FRIDAY, 20 JAN',
                         style: TextStyle(
                           fontSize: 11,
                         ),
                       ),
                       Text(
-                        'Good Morning, Siddesh',
+                        'Good Morning, Rakesh',
                         style: TextStyle(
                           fontSize: 22,
                         ),
@@ -62,35 +62,9 @@ class _RetailerDashBoardState extends State<RetailerDashBoard> {
               ),
               Row(
                 children: [
-                  InkWell(
-                    onTap: () {
-                      // AuthController.instance.signOut();
-                      auth.error = '';
-
-                      FirebaseAuth.instance.signOut().then((value) {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => WelcomeScreen(),
-                            ));
-                      });
-                    },
-                    child: Container(
-                      height: 35,
-                      width: 35,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.green, width: 3),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Icon(Icons.menu),
-                    ),
-                  ),
-                  const SizedBox(
-                    width: 20,
-                  ),
                   Container(
                     height: 35,
-                    width: 270,
+                    width: 290,
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.circular(15),
@@ -113,7 +87,33 @@ class _RetailerDashBoardState extends State<RetailerDashBoard> {
                         ],
                       ),
                     ),
-                  )
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      // AuthController.instance.signOut();
+                      auth.error = '';
+
+                      FirebaseAuth.instance.signOut().then((value) {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => WelcomeScreen(),
+                            ));
+                      });
+                    },
+                    child: Container(
+                      height: 35,
+                      width: 35,
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.green, width: 3),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Icon(Icons.logout),
+                    ),
+                  ),
                 ],
               )
             ],

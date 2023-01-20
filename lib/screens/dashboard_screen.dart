@@ -44,13 +44,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'WEDNESDAY, 18 JAN',
+                        'FRIDAY, 20 JAN',
                         style: TextStyle(
                           fontSize: 11,
                         ),
                       ),
                       Text(
-                        'Good Morning, Siddesh',
+                        'Good Morning, Ramesh',
                         style: TextStyle(
                           fontSize: 22,
                         ),
